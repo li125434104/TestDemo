@@ -1,0 +1,17 @@
+
+//
+//  TestDemo.pch
+//  TestDemo
+//
+//  Created by taishu on 2019/5/13.
+//  Copyright © 2019 taishu. All rights reserved.
+//
+
+#ifndef TestDemo_pch
+#define TestDemo_pch
+
+#import "XJTools.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* TestDemo_pch */

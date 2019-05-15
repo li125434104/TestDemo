@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    // 设置主窗口,并设置根控制器
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    [self.window makeKeyAndVisible];
+    
+    MainTabBarController *rootViewController = [[MainTabBarController alloc] init];
+    [self.window setRootViewController:rootViewController];
+    
     return YES;
 }
 

@@ -1,0 +1,6 @@
+framework module XJScanQRCode {
+  umbrella header "XJScanQRCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

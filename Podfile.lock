@@ -1,0 +1,38 @@
+PODS:
+  - CYLTabBarController (1.24.1):
+    - CYLTabBarController/Core (= 1.24.1)
+  - CYLTabBarController/Core (1.24.1)
+  - DFPlayer (1.0.5)
+  - JXBWebKit (1.1.1)
+  - XJScanQRCode (1.0.0)
+  - XJTools (1.0.10)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - CYLTabBarController
+  - DFPlayer
+  - JXBWebKit
+  - XJScanQRCode
+  - XJTools
+  - YYText
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CYLTabBarController
+    - DFPlayer
+    - JXBWebKit
+    - XJScanQRCode
+    - XJTools
+    - YYText
+
+SPEC CHECKSUMS:
+  CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
+  DFPlayer: e4eff7dcd6afaf0042bb0a0b8369fe609defbad4
+  JXBWebKit: f9459910a5fce771f971e176ec6fe9f4acb2f333
+  XJScanQRCode: 0609be7a8e25ff1fad0dcdeb992f41db3838b487
+  XJTools: 22926dbe9485df3cfc7ecfbe58fcb31397aa0e8b
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 5ce6c1a79a02788116591314b943c35b3aadce65
+
+COCOAPODS: 1.6.1
