@@ -6,11 +6,11 @@
 //  Copyright © 2019 taishu. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "XJSetTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MineViewController : BaseViewController
+@interface MineViewController : XJSetTableViewController
 
 @end
 

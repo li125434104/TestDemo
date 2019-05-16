@@ -9,7 +9,25 @@
 /* Begin PBXBuildFile section */
 		6257CA3A228BBA400075E5CA /* VerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6257CA39228BBA400075E5CA /* VerificationCodeView.m */; };
 		6257CA3D228BDEB40075E5CA /* PasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6257CA3C228BDEB40075E5CA /* PasswordView.m */; };
+		6257CA44228C13DA0075E5CA /* XJSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6257CA43228C13DA0075E5CA /* XJSetTableViewController.m */; };
 		628DA9F3228BB6B400233CDF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DA9F2228BB6B400233CDF /* RegisterViewController.m */; };
+		62B7D534228D04560057ECAC /* XJBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D533228D04560057ECAC /* XJBaseCellModel.m */; };
+		62B7D538228D0CB50057ECAC /* XJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D537228D0CB50057ECAC /* XJBaseTableViewCell.m */; };
+		62B7D541228D31C10057ECAC /* CALayer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D540228D31C10057ECAC /* CALayer+Addition.m */; };
+		62B7D544228D390E0057ECAC /* XJTitleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D543228D390E0057ECAC /* XJTitleCellModel.m */; };
+		62B7D546228D3A820057ECAC /* HSSetTableViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62B7D545228D3A810057ECAC /* HSSetTableViewController.bundle */; };
+		62B7D549228D3CFB0057ECAC /* HSSetTableViewControllerConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D548228D3CFB0057ECAC /* HSSetTableViewControllerConst.m */; };
+		62B7D54F228D44CA0057ECAC /* XJTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D54E228D44CA0057ECAC /* XJTitleCell.m */; };
+		62B7D552228D48C90057ECAC /* XJImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D551228D48C90057ECAC /* XJImageCellModel.m */; };
+		62B7D555228D4B090057ECAC /* XJImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D554228D4B090057ECAC /* XJImageCell.m */; };
+		62B7D558228D5D380057ECAC /* XJSwitchCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D557228D5D380057ECAC /* XJSwitchCellModel.m */; };
+		62B7D55B228D5E7D0057ECAC /* XJSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D55A228D5E7D0057ECAC /* XJSwitchCell.m */; };
+		62B7D55E228D5EDE0057ECAC /* XJTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D55D228D5EDE0057ECAC /* XJTextCell.m */; };
+		62B7D561228D5F000057ECAC /* XJTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D560228D5F000057ECAC /* XJTextCellModel.m */; };
+		62B7D564228D62630057ECAC /* XJCustomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D563228D62630057ECAC /* XJCustomCellModel.m */; };
+		62B7D567228D62800057ECAC /* XJCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D566228D62800057ECAC /* XJCustomCell.m */; };
+		62B7D56D228D66260057ECAC /* MineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D56C228D66260057ECAC /* MineHeaderCell.m */; };
+		62B7D570228D6AD80057ECAC /* MineHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D56F228D6AD80057ECAC /* MineHeaderModel.m */; };
 		62CBDE4B22840D9100BB80E9 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBDE4A22840D9100BB80E9 /* MainTabBarController.m */; };
 		62CBDE592284120500BB80E9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBDE582284120500BB80E9 /* BaseViewController.m */; };
 		62CBDE5C2284127200BB80E9 /* AudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBDE5B2284127200BB80E9 /* AudioPlayerViewController.m */; };
@@ -34,8 +52,44 @@
 		6257CA39228BBA400075E5CA /* VerificationCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeView.m; sourceTree = "<group>"; };
 		6257CA3B228BDEB40075E5CA /* PasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordView.h; sourceTree = "<group>"; };
 		6257CA3C228BDEB40075E5CA /* PasswordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordView.m; sourceTree = "<group>"; };
+		6257CA42228C13DA0075E5CA /* XJSetTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSetTableViewController.h; sourceTree = "<group>"; };
+		6257CA43228C13DA0075E5CA /* XJSetTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSetTableViewController.m; sourceTree = "<group>"; };
 		628DA9F1228BB6B400233CDF /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		628DA9F2228BB6B400233CDF /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		62B7D532228D04560057ECAC /* XJBaseCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJBaseCellModel.h; sourceTree = "<group>"; };
+		62B7D533228D04560057ECAC /* XJBaseCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJBaseCellModel.m; sourceTree = "<group>"; };
+		62B7D536228D0CB50057ECAC /* XJBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJBaseTableViewCell.h; sourceTree = "<group>"; };
+		62B7D537228D0CB50057ECAC /* XJBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJBaseTableViewCell.m; sourceTree = "<group>"; };
+		62B7D53F228D31C10057ECAC /* CALayer+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Addition.h"; sourceTree = "<group>"; };
+		62B7D540228D31C10057ECAC /* CALayer+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Addition.m"; sourceTree = "<group>"; };
+		62B7D542228D390E0057ECAC /* XJTitleCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTitleCellModel.h; sourceTree = "<group>"; };
+		62B7D543228D390E0057ECAC /* XJTitleCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTitleCellModel.m; sourceTree = "<group>"; };
+		62B7D545228D3A810057ECAC /* HSSetTableViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HSSetTableViewController.bundle; sourceTree = "<group>"; };
+		62B7D547228D3CFB0057ECAC /* HSSetTableViewControllerConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSSetTableViewControllerConst.h; sourceTree = "<group>"; };
+		62B7D548228D3CFB0057ECAC /* HSSetTableViewControllerConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSSetTableViewControllerConst.m; sourceTree = "<group>"; };
+		62B7D54B228D3E950057ECAC /* XJSetTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSetTable.h; sourceTree = "<group>"; };
+		62B7D54D228D44CA0057ECAC /* XJTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTitleCell.h; sourceTree = "<group>"; };
+		62B7D54E228D44CA0057ECAC /* XJTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTitleCell.m; sourceTree = "<group>"; };
+		62B7D550228D48C90057ECAC /* XJImageCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJImageCellModel.h; sourceTree = "<group>"; };
+		62B7D551228D48C90057ECAC /* XJImageCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJImageCellModel.m; sourceTree = "<group>"; };
+		62B7D553228D4B090057ECAC /* XJImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJImageCell.h; sourceTree = "<group>"; };
+		62B7D554228D4B090057ECAC /* XJImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJImageCell.m; sourceTree = "<group>"; };
+		62B7D556228D5D380057ECAC /* XJSwitchCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSwitchCellModel.h; sourceTree = "<group>"; };
+		62B7D557228D5D380057ECAC /* XJSwitchCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSwitchCellModel.m; sourceTree = "<group>"; };
+		62B7D559228D5E7D0057ECAC /* XJSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSwitchCell.h; sourceTree = "<group>"; };
+		62B7D55A228D5E7D0057ECAC /* XJSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSwitchCell.m; sourceTree = "<group>"; };
+		62B7D55C228D5EDE0057ECAC /* XJTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTextCell.h; sourceTree = "<group>"; };
+		62B7D55D228D5EDE0057ECAC /* XJTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTextCell.m; sourceTree = "<group>"; };
+		62B7D55F228D5F000057ECAC /* XJTextCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTextCellModel.h; sourceTree = "<group>"; };
+		62B7D560228D5F000057ECAC /* XJTextCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTextCellModel.m; sourceTree = "<group>"; };
+		62B7D562228D62630057ECAC /* XJCustomCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJCustomCellModel.h; sourceTree = "<group>"; };
+		62B7D563228D62630057ECAC /* XJCustomCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJCustomCellModel.m; sourceTree = "<group>"; };
+		62B7D565228D62800057ECAC /* XJCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJCustomCell.h; sourceTree = "<group>"; };
+		62B7D566228D62800057ECAC /* XJCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJCustomCell.m; sourceTree = "<group>"; };
+		62B7D56B228D66260057ECAC /* MineHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderCell.h; sourceTree = "<group>"; };
+		62B7D56C228D66260057ECAC /* MineHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderCell.m; sourceTree = "<group>"; };
+		62B7D56E228D6AD80057ECAC /* MineHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderModel.h; sourceTree = "<group>"; };
+		62B7D56F228D6AD80057ECAC /* MineHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderModel.m; sourceTree = "<group>"; };
 		62CBDE4922840D9100BB80E9 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		62CBDE4A22840D9100BB80E9 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		62CBDE572284120500BB80E9 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -111,6 +165,104 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6257CA3F228C135F0075E5CA /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				62B7D54C228D3E9B0057ECAC /* Other */,
+				62B7D535228D0C9A0057ECAC /* Views */,
+				62B7D531228CECFD0057ECAC /* Model */,
+				6257CA41228C13B20075E5CA /* Controller */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		6257CA41228C13B20075E5CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6257CA42228C13DA0075E5CA /* XJSetTableViewController.h */,
+				6257CA43228C13DA0075E5CA /* XJSetTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62B7D531228CECFD0057ECAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62B7D532228D04560057ECAC /* XJBaseCellModel.h */,
+				62B7D533228D04560057ECAC /* XJBaseCellModel.m */,
+				62B7D542228D390E0057ECAC /* XJTitleCellModel.h */,
+				62B7D543228D390E0057ECAC /* XJTitleCellModel.m */,
+				62B7D550228D48C90057ECAC /* XJImageCellModel.h */,
+				62B7D551228D48C90057ECAC /* XJImageCellModel.m */,
+				62B7D556228D5D380057ECAC /* XJSwitchCellModel.h */,
+				62B7D557228D5D380057ECAC /* XJSwitchCellModel.m */,
+				62B7D55F228D5F000057ECAC /* XJTextCellModel.h */,
+				62B7D560228D5F000057ECAC /* XJTextCellModel.m */,
+				62B7D562228D62630057ECAC /* XJCustomCellModel.h */,
+				62B7D563228D62630057ECAC /* XJCustomCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		62B7D535228D0C9A0057ECAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62B7D536228D0CB50057ECAC /* XJBaseTableViewCell.h */,
+				62B7D537228D0CB50057ECAC /* XJBaseTableViewCell.m */,
+				62B7D54D228D44CA0057ECAC /* XJTitleCell.h */,
+				62B7D54E228D44CA0057ECAC /* XJTitleCell.m */,
+				62B7D553228D4B090057ECAC /* XJImageCell.h */,
+				62B7D554228D4B090057ECAC /* XJImageCell.m */,
+				62B7D559228D5E7D0057ECAC /* XJSwitchCell.h */,
+				62B7D55A228D5E7D0057ECAC /* XJSwitchCell.m */,
+				62B7D55C228D5EDE0057ECAC /* XJTextCell.h */,
+				62B7D55D228D5EDE0057ECAC /* XJTextCell.m */,
+				62B7D565228D62800057ECAC /* XJCustomCell.h */,
+				62B7D566228D62800057ECAC /* XJCustomCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62B7D54C228D3E9B0057ECAC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				62B7D547228D3CFB0057ECAC /* HSSetTableViewControllerConst.h */,
+				62B7D548228D3CFB0057ECAC /* HSSetTableViewControllerConst.m */,
+				62B7D545228D3A810057ECAC /* HSSetTableViewController.bundle */,
+				62B7D53F228D31C10057ECAC /* CALayer+Addition.h */,
+				62B7D540228D31C10057ECAC /* CALayer+Addition.m */,
+				62B7D54B228D3E950057ECAC /* XJSetTable.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		62B7D568228D65550057ECAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62CBDE5D2284128700BB80E9 /* MineViewController.h */,
+				62CBDE5E2284128700BB80E9 /* MineViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		62B7D569228D65630057ECAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62B7D56B228D66260057ECAC /* MineHeaderCell.h */,
+				62B7D56C228D66260057ECAC /* MineHeaderCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62B7D56A228D656B0057ECAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62B7D56E228D6AD80057ECAC /* MineHeaderModel.h */,
+				62B7D56F228D6AD80057ECAC /* MineHeaderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		62CBDE482283FE7500BB80E9 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +318,9 @@
 		62CBDE53228411AC00BB80E9 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				62CBDE5D2284128700BB80E9 /* MineViewController.h */,
-				62CBDE5E2284128700BB80E9 /* MineViewController.m */,
+				62B7D56A228D656B0057ECAC /* Model */,
+				62B7D569228D65630057ECAC /* Views */,
+				62B7D568228D65550057ECAC /* Controllers */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -184,6 +337,7 @@
 		62CBDE55228411E300BB80E9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6257CA3F228C135F0075E5CA /* TableView */,
 				62CBDE56228411F800BB80E9 /* VC */,
 				62CBDE482283FE7500BB80E9 /* Tabbar */,
 			);
@@ -322,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D9F1FF2277F24B007F1068 /* LaunchScreen.storyboard in Resources */,
+				62B7D546228D3A820057ECAC /* HSSetTableViewController.bundle in Resources */,
 				62D9F1FC2277F24B007F1068 /* Assets.xcassets in Resources */,
 				62D9F1FA2277F242007F1068 /* Main.storyboard in Resources */,
 			);
@@ -391,21 +546,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B7D567228D62800057ECAC /* XJCustomCell.m in Sources */,
 				62D9F1F72277F242007F1068 /* ViewController.m in Sources */,
+				62B7D552228D48C90057ECAC /* XJImageCellModel.m in Sources */,
+				62B7D56D228D66260057ECAC /* MineHeaderCell.m in Sources */,
+				62B7D558228D5D380057ECAC /* XJSwitchCellModel.m in Sources */,
 				62CBDE5F2284128700BB80E9 /* MineViewController.m in Sources */,
 				62CBDE592284120500BB80E9 /* BaseViewController.m in Sources */,
 				62CBDE68228412B100BB80E9 /* HomeViewController.m in Sources */,
+				62B7D541228D31C10057ECAC /* CALayer+Addition.m in Sources */,
 				62CBDE5C2284127200BB80E9 /* AudioPlayerViewController.m in Sources */,
+				62B7D534228D04560057ECAC /* XJBaseCellModel.m in Sources */,
+				62B7D55B228D5E7D0057ECAC /* XJSwitchCell.m in Sources */,
+				62B7D538228D0CB50057ECAC /* XJBaseTableViewCell.m in Sources */,
 				62D9F2022277F24B007F1068 /* main.m in Sources */,
+				62B7D549228D3CFB0057ECAC /* HSSetTableViewControllerConst.m in Sources */,
+				62B7D570228D6AD80057ECAC /* MineHeaderModel.m in Sources */,
+				62B7D54F228D44CA0057ECAC /* XJTitleCell.m in Sources */,
 				6257CA3A228BBA400075E5CA /* VerificationCodeView.m in Sources */,
+				62B7D555228D4B090057ECAC /* XJImageCell.m in Sources */,
+				62B7D561228D5F000057ECAC /* XJTextCellModel.m in Sources */,
 				62CBDE65228412A700BB80E9 /* MyAudioViewController.m in Sources */,
+				62B7D564228D62630057ECAC /* XJCustomCellModel.m in Sources */,
+				62B7D544228D390E0057ECAC /* XJTitleCellModel.m in Sources */,
 				6257CA3D228BDEB40075E5CA /* PasswordView.m in Sources */,
 				62CBDE4B22840D9100BB80E9 /* MainTabBarController.m in Sources */,
+				6257CA44228C13DA0075E5CA /* XJSetTableViewController.m in Sources */,
 				62CBDE7022842C6D00BB80E9 /* LoginViewController.m in Sources */,
 				628DA9F3228BB6B400233CDF /* RegisterViewController.m in Sources */,
 				62CBDE6C2284190C00BB80E9 /* CYLPlusButtonSubclass.m in Sources */,
 				62D9F1F42277F242007F1068 /* AppDelegate.m in Sources */,
 				62CBDE622284129000BB80E9 /* FindViewController.m in Sources */,
+				62B7D55E228D5EDE0057ECAC /* XJTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
