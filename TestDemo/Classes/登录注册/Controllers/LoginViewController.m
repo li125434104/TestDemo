@@ -124,8 +124,10 @@ typedef NS_ENUM(NSUInteger, LoginType) {
     
     //登录接口，回调中获取到userInfo信息
     #warning NSUserDefault存储登录信息
-//    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-//    [user setObject:@"" forKey:@"userInfo"];
+    NSUserDefaults *useName = [NSUserDefaults standardUserDefaults];
+    [useName setObject:self.accountTextField.text forKey:@"userName"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuccess" object:nil];
 }
 
 //第三方登录

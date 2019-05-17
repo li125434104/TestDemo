@@ -23,7 +23,7 @@
         self.separateHeight = HS_KSeparateHeight;
         self.titleFont = HS_KTitleFont;
         self.titleColor = HS_KTitleColor;
-        self.arrowImage = [self imageNamed:@"ic_hs_tableView_arrow" ofBundle:@"HSSetTableViewController"];
+        self.arrowImage = [self imageNamed:@"ic_hs_tableView_arrow"];
         self.arrowWidth = HS_KArrowWidth;
         self.arrowHeight = HS_kArrowHeight;
         self.controlRightOffset = HS_KCellMargin;
@@ -44,7 +44,7 @@
         self.separateHeight = HS_KSeparateHeight;
         self.titleFont = HS_KTitleFont;
         self.titleColor = HS_KTitleColor;
-        self.arrowImage = [self imageNamed:@"ic_hs_tableView_arrow" ofBundle:@"HSSetTableViewController"];
+        self.arrowImage = [self imageNamed:@"ic_hs_tableView_arrow"];
         self.arrowWidth = HS_KArrowWidth;
         self.arrowHeight = HS_kArrowHeight;
         self.controlRightOffset = HS_KCellMargin;
@@ -58,22 +58,12 @@
     return HSTitleCellModelCellClass;
 }
 
-- (UIImage *)imageNamed:(NSString *)name ofBundle:(NSString *)bundleName {
-    
-    UIImage *image = nil;
-    
-    NSString *image_name = [NSString stringWithFormat:@"%@.png", name];
-    
-    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
-    
-    NSString *bundlePath = [resourcePath stringByAppendingPathComponent:bundleName];
-    
-    NSString *image_path = [bundlePath stringByAppendingPathComponent:image_name];;
-    
-    image = [[UIImage alloc] initWithContentsOfFile:image_path];
-    
+- (UIImage *)imageNamed:(NSString *)name {
+    NSBundle *hs_Bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"HSSetTableViewController" ofType:@"bundle"]];
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    name = 3.0 == scale ? [NSString stringWithFormat:@"%@@3x.png", name] : [NSString stringWithFormat:@"%@@2x.png", name];
+    UIImage *image = [UIImage imageWithContentsOfFile:[[hs_Bundle resourcePath] stringByAppendingPathComponent:name]];
     return image;
-    
 }
 
 

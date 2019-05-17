@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - CYLTabBarController (1.24.1):
     - CYLTabBarController/Core (= 1.24.1)
   - CYLTabBarController/Core (1.24.1)
@@ -6,6 +21,8 @@ PODS:
   - JXBWebKit (1.1.1)
   - XJScanQRCode (1.0.0)
   - XJTools (1.0.10)
+  - XMNetworking (1.1.0):
+    - AFNetworking (~> 3.0)
   - YYText (1.0.7)
 
 DEPENDENCIES:
@@ -14,25 +31,30 @@ DEPENDENCIES:
   - JXBWebKit
   - XJScanQRCode
   - XJTools
+  - XMNetworking
   - YYText
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - CYLTabBarController
     - DFPlayer
     - JXBWebKit
     - XJScanQRCode
     - XJTools
+    - XMNetworking
     - YYText
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
   DFPlayer: e4eff7dcd6afaf0042bb0a0b8369fe609defbad4
   JXBWebKit: f9459910a5fce771f971e176ec6fe9f4acb2f333
   XJScanQRCode: 0609be7a8e25ff1fad0dcdeb992f41db3838b487
   XJTools: 22926dbe9485df3cfc7ecfbe58fcb31397aa0e8b
+  XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 5ce6c1a79a02788116591314b943c35b3aadce65
+PODFILE CHECKSUM: 96065d92b4f7477cdbe490225497ff3a754632cd
 
 COCOAPODS: 1.6.1

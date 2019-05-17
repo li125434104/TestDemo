@@ -18,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self getData];
+}
+
+#pragma mark -- Request
+- (void)getData {
+    [XMCenter sendRequest:^(XMRequest * _Nonnull request) {
+        request.api = @"netease/songList/highQuality";
+        request.httpMethod = kXMHTTPMethodGET;
+    } onSuccess:^(id  _Nullable responseObject) {
+        NSLog(@"response:%@",responseObject);
+    } onFailure:^(NSError * _Nullable error) {
+        
+    }];
 }
 
 /*

@@ -9,4 +9,6 @@ target 'TestDemo' do
     pod 'JXBWebKit'
     pod 'CYLTabBarController'
     pod 'YYText'
+    pod 'XMNetworking'
+
 end

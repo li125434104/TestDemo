@@ -12,9 +12,10 @@
 #import "LoginViewController.h"
 #import "XJSetTable.h"
 #import "MineHeaderModel.h"
+#import "MineHeaderCell.h"
 
 @interface MineViewController ()
-
+@property (nonatomic, strong) MineHeaderModel *header;  //头部ViewcCell
 @end
 
 @implementation MineViewController
@@ -22,18 +23,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"#EBEDEF"];
-
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setTitle:@"登录" forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [button addTarget:self action:@selector(loginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//    button.frame = CGRectMake(100, 100, 100, 40);
-//    [self.view addSubview:button];
     
-    MineHeaderModel *header = [[MineHeaderModel alloc] initWithCellIdentifier:@"MineHeaderCell" actionBlock:^(XJBaseCellModel * _Nonnull model) {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:@"loginSuccess" object:nil];
+    
+    self.header = [[MineHeaderModel alloc] initWithLoginBlock:^{
+        [self loginBtnClick];
+        NSLog(@"dddd");
+    } actionBlock:^(XJBaseCellModel * _Nonnull model) {
         
     }];
-    header.cellHeight = 80;
+    self.header.isLogin = NO;
+    self.header.cellHeight = 80;
+
+  
     
     //消息通知
     XJTitleCellModel *msg = [[XJTitleCellModel alloc] initWithTitle:@"消息通知" actionBlock:^(XJBaseCellModel * _Nonnull model) {
@@ -64,7 +67,7 @@
         
     }];
     
-    NSMutableArray *section0 = [NSMutableArray arrayWithObjects:header,nil];
+    NSMutableArray *section0 = [NSMutableArray arrayWithObjects:self.header,nil];
     NSMutableArray *section1 = [NSMutableArray arrayWithObjects:msg, record,clean,nil];
     NSMutableArray *section2 = [NSMutableArray arrayWithObjects:security, privacy,help,nil];
     NSMutableArray *section3 = [NSMutableArray arrayWithObjects:about,nil];
@@ -75,10 +78,15 @@
     [self.xj_tableView reloadData];
 }
 
-- (void)loginBtnClick:(UIButton *)button {
+- (void)loginBtnClick {
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
     [self presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)loginSuccess {
+    self.header.isLogin = YES;
+    [self updateCellModel:self.header];
 }
 
 /*

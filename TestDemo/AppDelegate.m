@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+#import "NetworkManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,8 +24,12 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     [self.window makeKeyAndVisible];
     
+    [NetworkManager setup];
+
     MainTabBarController *rootViewController = [[MainTabBarController alloc] init];
     [self.window setRootViewController:rootViewController];
+    
+    
     
     return YES;
 }

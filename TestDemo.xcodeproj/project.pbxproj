@@ -43,6 +43,7 @@
 		62D9F1FC2277F24B007F1068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D9F1FB2277F24B007F1068 /* Assets.xcassets */; };
 		62D9F1FF2277F24B007F1068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9F1FD2277F24B007F1068 /* LaunchScreen.storyboard */; };
 		62D9F2022277F24B007F1068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D9F2012277F24B007F1068 /* main.m */; };
+		62E1468A228E953E00BC7709 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E14689228E953E00BC7709 /* NetworkManager.m */; };
 		C7681D227DC06F413EC4DC26 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAAB3D5AA767FB7581596D6 /* Pods_TestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,8 @@
 		62D9F1FE2277F24B007F1068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62D9F2002277F24B007F1068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D9F2012277F24B007F1068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62E14688228E953E00BC7709 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		62E14689228E953E00BC7709 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		91AF616E64C313C914261D41 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E764EABC299FC14EA0FE15 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,6 +397,7 @@
 		62D9F1F12277F242007F1068 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				62E14686228E923E00BC7709 /* Tools */,
 				62D59DB222894775005CBD23 /* Resource */,
 				62CBDE55228411E300BB80E9 /* Base */,
 				62CBDE4F2284116100BB80E9 /* Classes */,
@@ -405,6 +409,23 @@
 				62D9F1FD2277F24B007F1068 /* LaunchScreen.storyboard */,
 			);
 			path = TestDemo;
+			sourceTree = "<group>";
+		};
+		62E14686228E923E00BC7709 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				62E14687228E924400BC7709 /* Manager */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		62E14687228E924400BC7709 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				62E14688228E953E00BC7709 /* NetworkManager.h */,
+				62E14689228E953E00BC7709 /* NetworkManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C58749C52138B758A255267E /* Pods */ = {
@@ -494,22 +515,26 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/DFPlayer/DFPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/JXBWebKit/JXBWebKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XJScanQRCode/XJScanQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/XJTools/XJTools.framework",
+				"${BUILT_PRODUCTS_DIR}/XMNetworking/XMNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DFPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXBWebKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJScanQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +596,7 @@
 				62B7D544228D390E0057ECAC /* XJTitleCellModel.m in Sources */,
 				6257CA3D228BDEB40075E5CA /* PasswordView.m in Sources */,
 				62CBDE4B22840D9100BB80E9 /* MainTabBarController.m in Sources */,
+				62E1468A228E953E00BC7709 /* NetworkManager.m in Sources */,
 				6257CA44228C13DA0075E5CA /* XJSetTableViewController.m in Sources */,
 				62CBDE7022842C6D00BB80E9 /* LoginViewController.m in Sources */,
 				628DA9F3228BB6B400233CDF /* RegisterViewController.m in Sources */,

@@ -10,4 +10,18 @@
 
 @implementation MineHeaderModel
 
+- (instancetype)initWithLoginBlock:(loginAction)loginAction actionBlock:(ClickActionBlock)actionblock {
+    if(self = [super initWithCellIdentifier:@"" actionBlock:^(XJBaseCellModel * _Nonnull model) {
+        
+    }]){
+        self.loginAction = loginAction;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
+}
+
+- (NSString *)cellClass
+{
+    return @"MineHeaderCell";
+}
 @end
