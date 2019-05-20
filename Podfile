@@ -10,5 +10,7 @@ target 'TestDemo' do
     pod 'CYLTabBarController'
     pod 'YYText'
     pod 'XMNetworking'
-
+    pod 'JXCategoryView'
+    pod 'MJExtension'
+    pod 'SDWebImage'
 end

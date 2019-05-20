@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABD99AA490DF95E6771D0830A7D74FFC"
+               BlueprintIdentifier = "C37EFCE0A204A6A189CE59E3A15224A1"
                BuildableName = "XJTools.framework"
                BlueprintName = "XJTools"
                ReferencedContainer = "container:Pods.xcodeproj">

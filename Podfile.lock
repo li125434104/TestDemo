@@ -19,6 +19,11 @@ PODS:
   - CYLTabBarController/Core (1.24.1)
   - DFPlayer (1.0.5)
   - JXBWebKit (1.1.1)
+  - JXCategoryView (1.3.5)
+  - MJExtension (3.0.17)
+  - SDWebImage (5.0.3):
+    - SDWebImage/Core (= 5.0.3)
+  - SDWebImage/Core (5.0.3)
   - XJScanQRCode (1.0.0)
   - XJTools (1.0.10)
   - XMNetworking (1.1.0):
@@ -29,6 +34,9 @@ DEPENDENCIES:
   - CYLTabBarController
   - DFPlayer
   - JXBWebKit
+  - JXCategoryView
+  - MJExtension
+  - SDWebImage
   - XJScanQRCode
   - XJTools
   - XMNetworking
@@ -40,6 +48,9 @@ SPEC REPOS:
     - CYLTabBarController
     - DFPlayer
     - JXBWebKit
+    - JXCategoryView
+    - MJExtension
+    - SDWebImage
     - XJScanQRCode
     - XJTools
     - XMNetworking
@@ -50,11 +61,14 @@ SPEC CHECKSUMS:
   CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
   DFPlayer: e4eff7dcd6afaf0042bb0a0b8369fe609defbad4
   JXBWebKit: f9459910a5fce771f971e176ec6fe9f4acb2f333
+  JXCategoryView: 0c74d0f534e4dba175f694a84ce32618b3943a86
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  SDWebImage: d4f87d7d36c8a4d9f9459dc282e0caa057fdf935
   XJScanQRCode: 0609be7a8e25ff1fad0dcdeb992f41db3838b487
   XJTools: 22926dbe9485df3cfc7ecfbe58fcb31397aa0e8b
   XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 96065d92b4f7477cdbe490225497ff3a754632cd
+PODFILE CHECKSUM: a72dd85719481680a8f5a427a1d70220647d3655
 
 COCOAPODS: 1.6.1

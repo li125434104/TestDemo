@@ -8,6 +8,10 @@
 //
 
 #import "HomeViewController.h"
+#import "SongListViewController.h"
+#define TICK   NSDate *startTime = [NSDate date];
+#define TOCK   NSLog(@"Time: %f", -[startTime timeIntervalSinceNow]);
+
 
 @interface HomeViewController ()
 
@@ -19,16 +23,30 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self getData];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"歌单" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.frame = CGRectMake(100, 100, 100, 50);
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(songListBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [self getData];
+}
+
+- (void)songListBtnClick:(UIButton *)button {
+    SongListViewController *vc = [[SongListViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -- Request
 - (void)getData {
+    TICK
     [XMCenter sendRequest:^(XMRequest * _Nonnull request) {
-        request.api = @"netease/songList/highQuality";
+        request.api = @"netease/songList?id=560609382";
         request.httpMethod = kXMHTTPMethodGET;
     } onSuccess:^(id  _Nullable responseObject) {
         NSLog(@"response:%@",responseObject);
+        TOCK
     } onFailure:^(NSError * _Nullable error) {
         
     }];
