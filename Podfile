@@ -13,4 +13,5 @@ target 'TestDemo' do
     pod 'JXCategoryView'
     pod 'MJExtension'
     pod 'SDWebImage'
+    pod 'CHGAdapter'
 end

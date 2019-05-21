@@ -14,10 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - CHGAdapter (0.3.6):
+    - DZNEmptyDataSet (~> 1.8.1)
   - CYLTabBarController (1.24.1):
     - CYLTabBarController/Core (= 1.24.1)
   - CYLTabBarController/Core (1.24.1)
   - DFPlayer (1.0.5)
+  - DZNEmptyDataSet (1.8.1)
   - JXBWebKit (1.1.1)
   - JXCategoryView (1.3.5)
   - MJExtension (3.0.17)
@@ -31,6 +34,7 @@ PODS:
   - YYText (1.0.7)
 
 DEPENDENCIES:
+  - CHGAdapter
   - CYLTabBarController
   - DFPlayer
   - JXBWebKit
@@ -45,8 +49,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - CHGAdapter
     - CYLTabBarController
     - DFPlayer
+    - DZNEmptyDataSet
     - JXBWebKit
     - JXCategoryView
     - MJExtension
@@ -58,8 +64,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CHGAdapter: 9b032edd60ec7c8acfe2ce39a6f521d77ac6bc64
   CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
   DFPlayer: e4eff7dcd6afaf0042bb0a0b8369fe609defbad4
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   JXBWebKit: f9459910a5fce771f971e176ec6fe9f4acb2f333
   JXCategoryView: 0c74d0f534e4dba175f694a84ce32618b3943a86
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
@@ -69,6 +77,6 @@ SPEC CHECKSUMS:
   XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: a72dd85719481680a8f5a427a1d70220647d3655
+PODFILE CHECKSUM: 3d6cb97b07720aced7f30459daa223ac60fa3a07
 
 COCOAPODS: 1.6.1

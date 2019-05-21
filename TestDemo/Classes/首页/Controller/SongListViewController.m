@@ -63,6 +63,7 @@
     listVC.category = self.categoryView.titles[index];
     listVC.itemClickBlock = ^(SongListModel * _Nonnull model) {
         SongListDetailViewController *vcc = [[SongListDetailViewController alloc] init];
+        vcc.songSheetID = model.ID;
         [self.navigationController pushViewController:vcc animated:YES];
     };
     return listVC;

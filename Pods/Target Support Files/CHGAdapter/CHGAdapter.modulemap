@@ -1,0 +1,6 @@
+framework module CHGAdapter {
+  umbrella header "CHGAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

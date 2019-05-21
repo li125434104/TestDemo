@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SongListDetailModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AudioPlayerViewController : UIViewController
+
+@property (nonatomic, strong) NSMutableArray <SongListDetailModel *>*songListArray;
+@property (nonatomic, assign) NSInteger number;   //歌的序号
 
 @end
 
