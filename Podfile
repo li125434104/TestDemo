@@ -14,4 +14,6 @@ target 'TestDemo' do
     pod 'MJExtension'
     pod 'SDWebImage'
     pod 'CHGAdapter'
+    pod 'DOUAudioStreamer'
+
 end

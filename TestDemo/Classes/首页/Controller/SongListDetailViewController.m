@@ -10,7 +10,7 @@
 #import "CHGAdapter.h"
 #import "SongListDetailModel.h"
 #import "SongListDetailAdapter.h"
-#import "AudioPlayerViewController.h"
+#import "MusicPlayerViewController.h"
 
 @interface SongListDetailViewController ()
 
@@ -44,9 +44,11 @@
     self.tableView.tableViewDidSelectRowBlock = ^(UITableView *tableView, NSIndexPath *indexPath, id itemData) {
         NSLog(@"当前点击section:%li row:%li",indexPath.section,indexPath.row);
      
-        AudioPlayerViewController *vc = [[AudioPlayerViewController alloc] init];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        MusicPlayerViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MusicPlayerViewController"];
         vc.songListArray = [NSMutableArray arrayWithArray:weakSelf.adapterData.cellDatas];
-        vc.number = indexPath.section;
+        vc.currentIndex = indexPath.section;
+        
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         [weakSelf presentViewController:nav animated:YES completion:nil];
     };
@@ -67,6 +69,7 @@
             SongListDetailModel *model = [SongListDetailModel mj_objectWithKeyValues:array[i]];
             model.coverUrl = [[array[i] objectForKey:@"album"] objectForKey:@"blurPicUrl"];
             model.audioUrl = [NSString stringWithFormat:@"https://v1.itooi.cn/netease/url?id=%@&quality=flac",model.ID];
+            model.artistName = [[[array[i] objectForKey:@"artists"] firstObject] objectForKey:@"name"];
             [tmpArray addObject:model];
         }
         self.adapterData.cellDatas = tmpArray;
