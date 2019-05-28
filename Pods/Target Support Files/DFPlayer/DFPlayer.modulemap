@@ -1,6 +1,0 @@
-framework module DFPlayer {
-  umbrella header "DFPlayer-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -5,7 +5,6 @@ platform :ios, '9.0'
 target 'TestDemo' do
     pod 'XJTools'
     pod 'XJScanQRCode'
-    pod 'DFPlayer'
     pod 'JXBWebKit'
     pod 'CYLTabBarController'
     pod 'YYText'
@@ -15,5 +14,7 @@ target 'TestDemo' do
     pod 'SDWebImage'
     pod 'CHGAdapter'
     pod 'DOUAudioStreamer'
-
+    pod 'ZFPlayer'
+    pod 'ZFPlayer/ControlView'
+    pod 'ZFPlayer/AVPlayer'
 end

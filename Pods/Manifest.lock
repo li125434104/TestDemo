@@ -19,7 +19,6 @@ PODS:
   - CYLTabBarController (1.24.1):
     - CYLTabBarController/Core (= 1.24.1)
   - CYLTabBarController/Core (1.24.1)
-  - DFPlayer (1.0.5)
   - DOUAudioStreamer (0.2.15)
   - DZNEmptyDataSet (1.8.1)
   - JXBWebKit (1.1.1)
@@ -33,11 +32,17 @@ PODS:
   - XMNetworking (1.1.0):
     - AFNetworking (~> 3.0)
   - YYText (1.0.7)
+  - ZFPlayer (3.2.11):
+    - ZFPlayer/Core (= 3.2.11)
+  - ZFPlayer/AVPlayer (3.2.11):
+    - ZFPlayer/Core
+  - ZFPlayer/ControlView (3.2.11):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (3.2.11)
 
 DEPENDENCIES:
   - CHGAdapter
   - CYLTabBarController
-  - DFPlayer
   - DOUAudioStreamer
   - JXBWebKit
   - JXCategoryView
@@ -47,13 +52,15 @@ DEPENDENCIES:
   - XJTools
   - XMNetworking
   - YYText
+  - ZFPlayer
+  - ZFPlayer/AVPlayer
+  - ZFPlayer/ControlView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - CHGAdapter
     - CYLTabBarController
-    - DFPlayer
     - DOUAudioStreamer
     - DZNEmptyDataSet
     - JXBWebKit
@@ -64,12 +71,12 @@ SPEC REPOS:
     - XJTools
     - XMNetworking
     - YYText
+    - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CHGAdapter: 9b032edd60ec7c8acfe2ce39a6f521d77ac6bc64
   CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
-  DFPlayer: e4eff7dcd6afaf0042bb0a0b8369fe609defbad4
   DOUAudioStreamer: 14f217bab01b52171fc2bd7d96e1f8fdd50fce68
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   JXBWebKit: f9459910a5fce771f971e176ec6fe9f4acb2f333
@@ -80,7 +87,8 @@ SPEC CHECKSUMS:
   XJTools: 22926dbe9485df3cfc7ecfbe58fcb31397aa0e8b
   XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  ZFPlayer: 4260b232df83cc7d571ffaa81e9317b3a74eb57c
 
-PODFILE CHECKSUM: acd1593c66bd1abd827195059215c9107e99c3ab
+PODFILE CHECKSUM: e9b7a313749192ed467a963f282c995417a54ad9
 
 COCOAPODS: 1.6.1

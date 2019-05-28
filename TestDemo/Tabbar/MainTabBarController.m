@@ -11,7 +11,6 @@
 #import "MyAudioViewController.h"
 #import "FindViewController.h"
 #import "MineViewController.h"
-#import "AudioPlayerViewController.h"
 #import "CYLPlusButtonSubclass.h"
 
 @interface MainTabBarController ()

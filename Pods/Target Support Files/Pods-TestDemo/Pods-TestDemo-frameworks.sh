@@ -156,7 +156,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CHGAdapter/CHGAdapter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DFPlayer/DFPlayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DOUAudioStreamer/DOUAudioStreamer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXBWebKit/JXBWebKit.framework"
@@ -167,12 +166,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/XJTools/XJTools.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XMNetworking/XMNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CHGAdapter/CHGAdapter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DFPlayer/DFPlayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DOUAudioStreamer/DOUAudioStreamer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXBWebKit/JXBWebKit.framework"
@@ -183,6 +182,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/XJTools/XJTools.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XMNetworking/XMNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

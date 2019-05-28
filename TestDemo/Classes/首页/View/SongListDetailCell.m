@@ -35,5 +35,12 @@
     self.nameLabel.text = model.name;
     self.mvButton.hidden = [model.mvid isEqualToString:@"0"] ? YES : NO;
 }
+    
+- (IBAction)mvBtnClick:(UIButton *)sender {
+    self.eventTransmissionBlock(self, self.cellData, 1, ^id(id data) {
+        return nil;
+    });
+}
+    
 
 @end

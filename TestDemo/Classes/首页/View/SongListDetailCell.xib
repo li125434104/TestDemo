@@ -32,6 +32,9 @@
                             <constraint firstAttribute="height" constant="30" id="zAm-1F-eRB"/>
                         </constraints>
                         <state key="normal" title="MV"/>
+                        <connections>
+                            <action selector="mvBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RaL-SE-yP4"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmH-eM-ye1">
                         <rect key="frame" x="31" y="13.5" width="36" height="17"/>
@@ -55,6 +58,7 @@
                 <outlet property="nameLabel" destination="bmH-eM-ye1" id="JP4-x8-rbM"/>
                 <outlet property="numberLabel" destination="jZJ-i1-W1f" id="GgR-ks-0a6"/>
             </connections>
+            <point key="canvasLocation" x="-161" y="31"/>
         </tableViewCell>
     </objects>
 </document>

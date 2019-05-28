@@ -11,6 +11,7 @@
 #import "SongListDetailModel.h"
 #import "SongListDetailAdapter.h"
 #import "MusicPlayerViewController.h"
+#import "VideoPlayerViewController.h"
 
 @interface SongListDetailViewController ()
 
@@ -52,6 +53,17 @@
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         [weakSelf presentViewController:nav animated:YES completion:nil];
     };
+    
+    self.tableView.eventTransmissionBlock = ^id(id target, id params, NSInteger tag, CHGCallBack callBack) {
+        
+        SongListDetailModel *model = params;
+        VideoPlayerViewController *vc = [[VideoPlayerViewController alloc] init];
+        vc.videoId = model.mvid;
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [weakSelf presentViewController:nav animated:YES completion:nil];
+        return nil;
+    };
+    
 }
 
 #pragma mark -- Request
