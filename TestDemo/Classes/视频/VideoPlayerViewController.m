@@ -35,6 +35,8 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
     [self setVideoPlayer];
     
     [self douyin];
+    
+    
 }
     
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,7 +74,37 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
 }
 
 - (void)gotoDouyin {
+//    NSArray *array = @[@"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4",
+//                       @"https://www.apple.com/105/media/cn/mac/family/2018/46c4b917_abfd_45a3_9b51_4e3054191797/films/bruce/mac-bruce-tpl-cn-2018_1280x720h.mp4",
+//                       @"https://www.apple.com/105/media/us/mac/family/2018/46c4b917_abfd_45a3_9b51_4e3054191797/films/peter/mac-peter-tpl-cc-us-2018_1280x720h.mp4",
+//                       @"https://www.apple.com/105/media/us/mac/family/2018/46c4b917_abfd_45a3_9b51_4e3054191797/films/grimes/mac-grimes-tpl-cc-us-2018_1280x720h.mp4",
+//                       @"http://flv3.bn.netease.com/tvmrepo/2018/6/H/9/EDJTRBEH9/SD/EDJTRBEH9-mobile.mp4",
+//                       @"http://flv3.bn.netease.com/tvmrepo/2018/6/9/R/EDJTRAD9R/SD/EDJTRAD9R-mobile.mp4",
+//                       @"http://www.flashls.org/playlists/test_001/stream_1000k_48k_640x360.m3u8",
+//                       @"http://tb-video.bdstatic.com/tieba-video/7_517c8948b166655ad5cfb563cc7fbd8e.mp4",
+//                       @"http://tb-video.bdstatic.com/tieba-smallvideo/68_20df3a646ab5357464cd819ea987763a.mp4",
+//                       @"http://tb-video.bdstatic.com/tieba-smallvideo/118_570ed13707b2ccee1057099185b115bf.mp4",
+//                       @"http://tb-video.bdstatic.com/tieba-smallvideo/15_ad895ac5fb21e5e7655556abee3775f8.mp4",
+//                       @"http://tb-video.bdstatic.com/tieba-smallvideo/12_cc75b3fb04b8a23546d62e3f56619e85.mp4",
+//                       @"http://tb-video.bdstatic.com/tieba-smallvideo/5_6d3243c354755b781f6cc80f60756ee5.mp4",
+//                       @"http://tb-video.bdstatic.com/tieba-movideo/11233547_ac127ce9e993877dce0eebceaa04d6c2_593d93a619b0.mp4"];
+
+    NSArray *array = @[@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff70000bck86n4mavf9lsqsr7m0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200fbd0000bbp4qkelg9jt2h2a2qsg&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff00000bcv0okld2r6fb5itjj10&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f180000bcstfbv3cp53oaad7s00&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff00000bccf84viv420lssd9is0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff50000bcki6irc86dlg7jsq6ug&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff00000bchogtf2gddrulo6f2rg&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff50000bcshae7a1hap4ad0hdh0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff50000bccs048ckqbl35li5cf0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f660000bc145moa2pejvu6q1n30&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=e10f7688daae4c07ad89441e60965030&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",
+                       @"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f180000bcv3d0o9lr7ddj9npmcg&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0"
+                       ];
+    
     DouyinViewController *vc = [[DouyinViewController alloc] init];
+    vc.dataArray = array;
     [self.navigationController pushViewController:vc animated:YES];
 }
      

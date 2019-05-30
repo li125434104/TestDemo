@@ -222,7 +222,7 @@
     //创建用于下载视频源的NSURLSessionDataTask，当前方法会多次调用，所以需判断self.task == nil
     if(_combineOperation == nil) {
         //将当前的请求路径的scheme换成https，进行普通的网络请求
-        NSURL *URL =  [self urlScheme:[loadingRequest.request URL].absoluteString withStr:_sourceScheme];
+        NSURL *URL =  [self urlScheme:_sourceScheme withStr:[loadingRequest.request URL].absoluteString];
         [self startDownloadTask:URL isBackground:YES];
     }
     //将视频加载请求依此存储到pendingRequests中，因为当前方法会多次调用，所以需用数组缓存

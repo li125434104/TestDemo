@@ -46,6 +46,7 @@
 		62CBDE68228412B100BB80E9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBDE67228412B100BB80E9 /* HomeViewController.m */; };
 		62CBDE6C2284190C00BB80E9 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBDE6B2284190C00BB80E9 /* CYLPlusButtonSubclass.m */; };
 		62CBDE7022842C6D00BB80E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBDE6F22842C6D00BB80E9 /* LoginViewController.m */; };
+		62D1A933229FA56400A2D88B /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D1A932229FA56400A2D88B /* CommentView.m */; };
 		62D8F38F2292844500FBAFF6 /* SongListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F38E2292844500FBAFF6 /* SongListViewController.m */; };
 		62D8F39222928E6000FBAFF6 /* SingleSongListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F39122928E6000FBAFF6 /* SingleSongListViewController.m */; };
 		62D8F3982292992600FBAFF6 /* SongListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D8F3962292992600FBAFF6 /* SongListCollectionViewCell.m */; };
@@ -145,6 +146,8 @@
 		62CBDE6B2284190C00BB80E9 /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
 		62CBDE6E22842C6D00BB80E9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		62CBDE6F22842C6D00BB80E9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		62D1A931229FA56400A2D88B /* CommentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		62D1A932229FA56400A2D88B /* CommentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
 		62D59DB1228945E0005CBD23 /* TestDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDemo.pch; sourceTree = "<group>"; };
 		62D8F38D2292844500FBAFF6 /* SongListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongListViewController.h; sourceTree = "<group>"; };
 		62D8F38E2292844500FBAFF6 /* SongListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongListViewController.m; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 			children = (
 				62F2794C229D2A500082BB58 /* DouyinCell.h */,
 				62F2794D229D2A500082BB58 /* DouyinCell.m */,
+				62D1A931229FA56400A2D88B /* CommentView.h */,
+				62D1A932229FA56400A2D88B /* CommentView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -720,6 +725,7 @@
 				"${BUILT_PRODUCTS_DIR}/JXBWebKit/JXBWebKit.framework",
 				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/XJScanQRCode/XJScanQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/XJTools/XJTools.framework",
@@ -739,6 +745,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXBWebKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJScanQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJTools.framework",
@@ -802,6 +809,7 @@
 				62D8F3982292992600FBAFF6 /* SongListCollectionViewCell.m in Sources */,
 				62D8F38F2292844500FBAFF6 /* SongListViewController.m in Sources */,
 				62D9F2022277F24B007F1068 /* main.m in Sources */,
+				62D1A933229FA56400A2D88B /* CommentView.m in Sources */,
 				629B297222967B6100606A67 /* VideoPlayerViewController.m in Sources */,
 				62B7D549228D3CFB0057ECAC /* HSSetTableViewControllerConst.m in Sources */,
 				62B7D570228D6AD80057ECAC /* MineHeaderModel.m in Sources */,

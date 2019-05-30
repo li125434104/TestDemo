@@ -11,14 +11,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^OnPlayerReady)(void);
+
 @interface DouyinCell : UITableViewCell
 
+@property (nonatomic, strong) NSString *videoUrl;
 @property (nonatomic, strong) AVPlayerView *playerView;
+@property (nonatomic, assign) BOOL isPlayerReady;
+@property (nonatomic, strong) OnPlayerReady onPlayerReady;
+
 - (void)play;
 - (void)pause;
 - (void)replay;
 - (void)startDownloadBackgroundTask;
-- (void)startDownloadHighPriorityTask;
 
 @end
 

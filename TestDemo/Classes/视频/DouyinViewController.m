@@ -11,6 +11,7 @@
 
 #import "DouyinViewController.h"
 #import "DouyinCell.h"
+#import "AVPlayerManager.h"
 
 NSString * const kDouyinCell = @"DouyinCell";
 #define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
@@ -19,6 +20,8 @@ NSString * const kDouyinCell = @"DouyinCell";
 @interface DouyinViewController ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, assign) BOOL isCurPlayerPause;
+
 @end
 
 @implementation DouyinViewController
@@ -26,6 +29,7 @@ NSString * const kDouyinCell = @"DouyinCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentIndex = 0;
+    self.isCurPlayerPause = NO;
     [self setNav];
     [self setBackgroundImage:@"img_video_loading"];
     [self setUpView];
@@ -96,7 +100,7 @@ NSString * const kDouyinCell = @"DouyinCell";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -107,8 +111,8 @@ NSString * const kDouyinCell = @"DouyinCell";
     //填充视频数据
     DouyinCell *cell = [tableView dequeueReusableCellWithIdentifier:kDouyinCell forIndexPath:indexPath];
     cell.backgroundColor = randomColor;
-//    [cell initData:_data[indexPath.row]];
-//    [cell startDownloadBackgroundTask];
+    cell.videoUrl = self.dataArray[indexPath.row];
+    [cell startDownloadBackgroundTask];
     return cell;
 }
 
@@ -143,26 +147,26 @@ NSString * const kDouyinCell = @"DouyinCell";
     //观察currentIndex变化
     if ([keyPath isEqualToString:@"currentIndex"]) {
         //设置用于标记当前视频是否播放的BOOL值为NO
-//        _isCurPlayerPause = NO;
+        _isCurPlayerPause = NO;
         //获取当前显示的cell
         DouyinCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
 //        [cell startDownloadHighPriorityTask];
         __weak typeof (cell) wcell = cell;
         __weak typeof (self) wself = self;
         //判断当前cell的视频源是否已经准备播放
-//        if(cell.isPlayerReady) {
-//            //播放视频
-//            [cell replay];
-//        }else {
-//            [[AVPlayerManager shareManager] pauseAll];
-//            //当前cell的视频源还未准备好播放，则实现cell的OnPlayerReady Block 用于等待视频准备好后通知播放
-//            cell.onPlayerReady = ^{
-//                NSIndexPath *indexPath = [wself.tableView indexPathForCell:wcell];
-//                if(!wself.isCurPlayerPause && indexPath && indexPath.row == wself.currentIndex) {
-//                    [wcell play];
-//                }
-//            };
-//        }
+        if(cell.isPlayerReady) {
+            //播放视频
+            [cell replay];
+        }else {
+            [[AVPlayerManager shareManager] pauseAll];
+            //当前cell的视频源还未准备好播放，则实现cell的OnPlayerReady Block 用于等待视频准备好后通知播放
+            cell.onPlayerReady = ^{
+                NSIndexPath *indexPath = [wself.tableView indexPathForCell:wcell];
+                if(!wself.isCurPlayerPause && indexPath && indexPath.row == wself.currentIndex) {
+                    [wcell play];
+                }
+            };
+        }
     } else {
         return [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
