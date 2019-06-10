@@ -218,7 +218,7 @@ static const CGFloat kCommentTopBottomInset = 15;
 
 - (UIView *)splitLine {
     if (!_splitLine) {
-        _splitLine = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5f)];
+        _splitLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5f)];
         _splitLine.backgroundColor = COLOR_RGBA(255.0, 255.0, 255.0, 0.4);
     }
     return _splitLine;
