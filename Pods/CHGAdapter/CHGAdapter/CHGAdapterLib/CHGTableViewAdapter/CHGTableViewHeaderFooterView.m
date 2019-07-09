@@ -10,19 +10,24 @@
 
 @implementation CHGTableViewHeaderFooterView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+@synthesize eventTransmissionBlock = _eventTransmissionBlock;
 
--(void)headerFooterForSection:(NSInteger)section inTableView:(UITableView*)tableView withData:(id)data type:(CHGTableViewHeaderFooterViewType)type {
-    self.section = section;
-    self.tableView = tableView;
-    self.headerFooterData = data;
-    self.type = type;
+@synthesize section = _section;
+
+@synthesize type = _type;
+
+@synthesize model = _model;
+
+@synthesize protocols = _protocols;
+
+@synthesize targetView = _targetView;
+
+
+- (NSMutableArray *)protocols {
+    if (!_protocols) {
+        _protocols = [NSMutableArray array];
+    }
+    return _protocols;
 }
 
 /**
@@ -31,7 +36,7 @@
  @return 返回tag
  */
 -(NSInteger)adapterTag {
-    return self.tableView.tableViewAdapter.tag;
+    return ((UITableView*)self.targetView).tableViewAdapter.tag;
 }
 
 /**
@@ -40,39 +45,54 @@
  @return 获取AdapterData中的customData
  */
 -(id)customData {
-    return self.tableView.tableViewAdapter.adapterData.customData;
+    return ((UITableView*)self.targetView).tableViewAdapter.adapterData.customData;
 }
 
 /**
  返回当前cell所在的controller
- 
+
  @return 返回当前cell所在的controller
  */
 -(UIViewController*)controller {
-    return self.tableView.tableViewAdapter.controller;
+    return ((UITableView*)self.targetView).tableViewAdapter.controller;
 }
 
-/**
- 将要复用
- 
- @param identifier identifier
- */
--(void)willReuseWithIdentifier:(NSString *)identifier {
-    
+- (void)headerFooterForSection:(NSInteger)section inTableView:(nonnull UITableView *)tableView withData:(nonnull id)data type:(CHGTableViewHeaderFooterViewType)type {
+    self.section = section;
+    self.targetView = tableView;
+    self.model = data;
+    self.type = type;
+    for (id protocol in self.protocols) {
+        [protocol headerFooterForSection:section inTableView:tableView withData:data type:type];
+    }
 }
 
-/**
- headerFooterView将要显示
- */
--(void)headerFooterViewWillAppearWithType:(CHGTableViewHeaderFooterViewType)type {
-    
+- (void)headerFooterViewDidDisAppearWithType:(CHGTableViewHeaderFooterViewType)type {
+    for (id protocol in self.protocols) {
+        [protocol headerFooterViewDidDisAppearWithType:type];
+    }
 }
 
-/**
- headerFooterView已经消失
- */
--(void)headerFooterViewDidDisAppearWithType:(CHGTableViewHeaderFooterViewType)type {
-    
+- (void)headerFooterViewWillAppearWithType:(CHGTableViewHeaderFooterViewType)type {
+    for (id protocol in self.protocols) {
+        [protocol headerFooterViewWillAppearWithType:type];
+    }
 }
+
+- (void)headerFooterViewWillReuseWithIdentifier:(nonnull NSString *)identifier {
+    for (id protocol in self.protocols) {
+        [protocol headerFooterViewWillReuseWithIdentifier:identifier];
+    }
+}
+
+- (void)setEventTransmissionBlock:(CHGEventTransmissionBlock)eventTransmissionBlock {
+    _eventTransmissionBlock = eventTransmissionBlock;
+    for (id protocol in self.protocols) {
+        [protocol setEventTransmissionBlock:eventTransmissionBlock];
+    }
+}
+
 
 @end
+
+

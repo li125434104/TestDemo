@@ -98,6 +98,9 @@ typedef NS_ENUM(NSInteger, ZFPlayerScalingMode) {
  */
 @property (nonatomic, readonly) BOOL isPreparedToPlay;
 
+/// The player should auto player, default is YES.
+@property (nonatomic) BOOL shouldAutoPlay;
+
 /// The play asset URL.
 @property (nonatomic) NSURL *assetURL;
 

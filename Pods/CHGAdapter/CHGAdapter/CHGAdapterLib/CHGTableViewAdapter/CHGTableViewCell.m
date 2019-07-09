@@ -10,9 +10,27 @@
 
 @implementation CHGTableViewCell
 
+@synthesize model = _model;
+
+@synthesize indexPath = _indexPath;
+
+@synthesize targetView = _targetView;
+
+@synthesize eventTransmissionBlock = _eventTransmissionBlock;
+
+@synthesize protocols = _protocols;
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)setEventTransmissionBlock:(CHGEventTransmissionBlock)eventTransmissionBlock {
+    _eventTransmissionBlock = eventTransmissionBlock;
+    for (id protocol in self.protocols) {
+        [protocol setEventTransmissionBlock:eventTransmissionBlock];
+    }
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -22,6 +40,18 @@
         [self setLayout];
     }
     return self;
+}
+
+- (NSMutableArray *)protocols {
+    if (!_protocols) {
+        _protocols = [NSMutableArray array];
+    }
+    return _protocols;
+}
+
+
+-(UITableView*)getTableView {
+    return (UITableView*)self.targetView;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,19 +66,13 @@
     //子类可在此布局
 }
 
--(void)cellForRowAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView withData:(id)data {
-    self.indexPath = indexPath;
-    self.tableView = tableView;
-    self.cellData = data;
-}
-
 /**
  获取当前Adapter的tag
  
  @return 返回tag
  */
 -(NSInteger)adapterTag {
-    return self.tableView.tableViewAdapter.tag;
+    return ((UITableView*)self.targetView).tableViewAdapter.tag;
 }
 
 /**
@@ -57,7 +81,7 @@
  @return 获取AdapterData中的customData
  */
 -(id)customData {
-    return self.tableView.tableViewAdapter.adapterData.customData;
+    return ((UITableView*)self.targetView).tableViewAdapter.adapterData.customData;
 }
 
 /**
@@ -66,7 +90,7 @@
  @return 返回当前cell所在的controller
  */
 -(UIViewController*)controller {
-    return self.tableView.tableViewAdapter.controller;
+    return ((UITableView*)self.targetView).tableViewAdapter.controller;
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -75,36 +99,46 @@
 }
 
 /**
- 将被复用
- 
- @param identifier identifier
- */
--(void)willReuseWithIdentifier:(NSString*)identifier {
-    
-}
-
-/**
- 将被复用
- 
- @param identifier identifier
- @param indexPath indexPath
- */
--(void)willReuseWithIdentifier:(NSString*)identifier indexPath:(NSIndexPath*)indexPath {
-    
-}
-
-/**
  cell将要显示
  */
 -(void)cellWillAppear {
-    
+    for (id protocol in self.protocols) {
+        [protocol cellWillAppear];
+    }
 }
 
 /**
  cell已经消失
  */
 -(void)cellDidDisappear {
-    
+    for (id protocol in self.protocols) {
+        [protocol cellDidDisappear];
+    }
 }
+
+- (void)cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath targetView:(nonnull UIView *)targetView withData:(nonnull id)data {
+    self.indexPath = indexPath;
+    self.targetView = targetView;
+    self.model = data;
+    for (id protocol in self.protocols) {
+        [protocol cellForRowAtIndexPath:indexPath targetView:targetView withData:data];
+    }
+}
+
+- (void)cellWillReuseWithIdentifier:(nonnull NSString *)identifier {
+    for (id protocol in self.protocols) {
+        [protocol cellWillReuseWithIdentifier:identifier];
+    }
+}
+
+
+- (void)cellWillReuseWithIdentifier:(nonnull NSString *)identifier indexPath:(nonnull NSIndexPath *)indexPath {
+    for (id protocol in self.protocols) {
+        [protocol cellWillReuseWithIdentifier:identifier indexPath:indexPath];
+    }
+}
+
+
+
 
 @end

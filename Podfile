@@ -18,5 +18,5 @@ target 'TestDemo' do
     pod 'ZFPlayer/ControlView'
     pod 'ZFPlayer/AVPlayer'
     pod 'Masonry'
-
+    pod 'MBProgressHUD'
 end

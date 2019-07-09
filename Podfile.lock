@@ -14,32 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CHGAdapter (0.3.6):
+  - CHGAdapter (1.0.0):
     - DZNEmptyDataSet (~> 1.8.1)
-  - CYLTabBarController (1.26.0):
-    - CYLTabBarController/Core (= 1.26.0)
-  - CYLTabBarController/Core (1.26.0)
+  - CYLTabBarController (1.28.3):
+    - CYLTabBarController/Core (= 1.28.3)
+  - CYLTabBarController/Core (1.28.3)
   - DOUAudioStreamer (0.2.15)
   - DZNEmptyDataSet (1.8.1)
   - JXBWebKit (1.1.1)
-  - JXCategoryView (1.3.7)
+  - JXCategoryView (1.3.14)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.0.17)
-  - SDWebImage (5.0.4):
-    - SDWebImage/Core (= 5.0.4)
-  - SDWebImage/Core (5.0.4)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - XJScanQRCode (1.0.0)
   - XJTools (1.0.11)
   - XMNetworking (1.1.0):
     - AFNetworking (~> 3.0)
   - YYText (1.0.7)
-  - ZFPlayer (3.2.11):
-    - ZFPlayer/Core (= 3.2.11)
-  - ZFPlayer/AVPlayer (3.2.11):
+  - ZFPlayer (3.2.12):
+    - ZFPlayer/Core (= 3.2.12)
+  - ZFPlayer/AVPlayer (3.2.12):
     - ZFPlayer/Core
-  - ZFPlayer/ControlView (3.2.11):
+  - ZFPlayer/ControlView (3.2.12):
     - ZFPlayer/Core
-  - ZFPlayer/Core (3.2.11)
+  - ZFPlayer/Core (3.2.12)
 
 DEPENDENCIES:
   - CHGAdapter
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - JXBWebKit
   - JXCategoryView
   - Masonry
+  - MBProgressHUD
   - MJExtension
   - SDWebImage
   - XJScanQRCode
@@ -68,6 +70,7 @@ SPEC REPOS:
     - JXBWebKit
     - JXCategoryView
     - Masonry
+    - MBProgressHUD
     - MJExtension
     - SDWebImage
     - XJScanQRCode
@@ -78,21 +81,22 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CHGAdapter: 9b032edd60ec7c8acfe2ce39a6f521d77ac6bc64
-  CYLTabBarController: 266188f29eb76fbbb476b7af33a2ab6c45246a63
+  CHGAdapter: ba281fafe2d5e65df505e9e5ebf9b49e78378604
+  CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   DOUAudioStreamer: 14f217bab01b52171fc2bd7d96e1f8fdd50fce68
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   JXBWebKit: f9459910a5fce771f971e176ec6fe9f4acb2f333
-  JXCategoryView: db36864126f6431bed4613b185d1a334a5c683f2
+  JXCategoryView: 008a9d2eb3ba6035eb2df9a2b3e9a4806d6601a3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
-  SDWebImage: c739016e4bdf0a4a1f9a04b5e0385395ad63a282
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   XJScanQRCode: 0609be7a8e25ff1fad0dcdeb992f41db3838b487
   XJTools: 49d99942be6e2808c1ed561962b238229bd45011
   XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
-  ZFPlayer: 4260b232df83cc7d571ffaa81e9317b3a74eb57c
+  ZFPlayer: fdc92702cc611922182a951991dea78566da7605
 
-PODFILE CHECKSUM: 41c4bd81bd94de7b0ca2db5ee7a8d1f0e4d25907
+PODFILE CHECKSUM: 0a1489f667064df18be680aaf75bf9aa3dfb5625
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.0.beta.3

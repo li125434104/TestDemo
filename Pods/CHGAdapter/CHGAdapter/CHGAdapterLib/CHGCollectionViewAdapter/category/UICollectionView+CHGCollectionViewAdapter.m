@@ -46,7 +46,7 @@ static const void * scrollListenerKey = &scrollListenerKey;
 - (__kindof UICollectionViewCell *)swizzlingDequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell * cell = [self swizzlingDequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     if ([cell isKindOfClass:[CHGCollectionViewCell class]]) {
-        [((CHGCollectionViewCell*)cell) willReuseWithIdentifier:identifier indexPath:indexPath];
+        [((CHGCollectionViewCell*)cell) cellWillReuseWithIdentifier:identifier indexPath:indexPath];
     }
     return cell;
 }
@@ -54,7 +54,7 @@ static const void * scrollListenerKey = &scrollListenerKey;
 - (__kindof UICollectionReusableView *)swizzlingDequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
     UICollectionReusableView * reusableView = [self swizzlingDequeueReusableSupplementaryViewOfKind:elementKind withReuseIdentifier:identifier forIndexPath:indexPath];
     if ([reusableView isKindOfClass:[CHGCollectionReusableView class]]) {
-        [((CHGCollectionReusableView*)reusableView) willReuseWithIdentifier:identifier indexPath:indexPath];
+        [((CHGCollectionReusableView*)reusableView) reusableViewWillReuseWithIdentifier:identifier indexPath:indexPath];
     }
     return reusableView;
 }

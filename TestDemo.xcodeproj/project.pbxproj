@@ -64,6 +64,10 @@
 		62F2793A229D215C0082BB58 /* DouyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F27939229D215C0082BB58 /* DouyinViewController.m */; };
 		62F27948229D23D90082BB58 /* WebCacheHelpler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F27947229D23D90082BB58 /* WebCacheHelpler.m */; };
 		62F2794E229D2A500082BB58 /* DouyinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F2794D229D2A500082BB58 /* DouyinCell.m */; };
+		A1427F1F22D4C1CD00E66262 /* CouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1427F1E22D4C1CD00E66262 /* CouponListViewController.m */; };
+		A1427F2422D4C39D00E66262 /* CouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1427F2222D4C39D00E66262 /* CouponCell.m */; };
+		A1427F2522D4C39D00E66262 /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1427F2322D4C39D00E66262 /* CouponCell.xib */; };
+		A1427F2822D4CEC300E66262 /* CouponSuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1427F2722D4CEC300E66262 /* CouponSuccessView.m */; };
 		C7681D227DC06F413EC4DC26 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAAB3D5AA767FB7581596D6 /* Pods_TestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +185,13 @@
 		62F2794C229D2A500082BB58 /* DouyinCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DouyinCell.h; sourceTree = "<group>"; };
 		62F2794D229D2A500082BB58 /* DouyinCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DouyinCell.m; sourceTree = "<group>"; };
 		91AF616E64C313C914261D41 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A1427F1D22D4C1CD00E66262 /* CouponListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponListViewController.h; sourceTree = "<group>"; };
+		A1427F1E22D4C1CD00E66262 /* CouponListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponListViewController.m; sourceTree = "<group>"; };
+		A1427F2122D4C39D00E66262 /* CouponCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponCell.h; sourceTree = "<group>"; };
+		A1427F2222D4C39D00E66262 /* CouponCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponCell.m; sourceTree = "<group>"; };
+		A1427F2322D4C39D00E66262 /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
+		A1427F2622D4CEC300E66262 /* CouponSuccessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponSuccessView.h; sourceTree = "<group>"; };
+		A1427F2722D4CEC300E66262 /* CouponSuccessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponSuccessView.m; sourceTree = "<group>"; };
 		C2E764EABC299FC14EA0FE15 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -367,6 +378,8 @@
 			children = (
 				62CBDE5D2284128700BB80E9 /* MineViewController.h */,
 				62CBDE5E2284128700BB80E9 /* MineViewController.m */,
+				A1427F1D22D4C1CD00E66262 /* CouponListViewController.h */,
+				A1427F1E22D4C1CD00E66262 /* CouponListViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +389,11 @@
 			children = (
 				62B7D56B228D66260057ECAC /* MineHeaderCell.h */,
 				62B7D56C228D66260057ECAC /* MineHeaderCell.m */,
+				A1427F2122D4C39D00E66262 /* CouponCell.h */,
+				A1427F2222D4C39D00E66262 /* CouponCell.m */,
+				A1427F2322D4C39D00E66262 /* CouponCell.xib */,
+				A1427F2622D4CEC300E66262 /* CouponSuccessView.h */,
+				A1427F2722D4CEC300E66262 /* CouponSuccessView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -700,6 +718,7 @@
 				62D8F3992292992600FBAFF6 /* SongListCollectionViewCell.xib in Resources */,
 				62B7D546228D3A820057ECAC /* HSSetTableViewController.bundle in Resources */,
 				62D9F1FC2277F24B007F1068 /* Assets.xcassets in Resources */,
+				A1427F2522D4C39D00E66262 /* CouponCell.xib in Resources */,
 				62D9F1FA2277F242007F1068 /* Main.storyboard in Resources */,
 				62C5A9B22293D43E00ADA2B1 /* SongListDetailCell.xib in Resources */,
 			);
@@ -714,44 +733,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/CHGAdapter/CHGAdapter.framework",
-				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/DOUAudioStreamer/DOUAudioStreamer.framework",
-				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
-				"${BUILT_PRODUCTS_DIR}/JXBWebKit/JXBWebKit.framework",
-				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/XJScanQRCode/XJScanQRCode.framework",
-				"${BUILT_PRODUCTS_DIR}/XJTools/XJTools.framework",
-				"${BUILT_PRODUCTS_DIR}/XMNetworking/XMNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
-				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHGAdapter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DOUAudioStreamer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXBWebKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJScanQRCode.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJTools.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -820,6 +806,7 @@
 				62B7D561228D5F000057ECAC /* XJTextCellModel.m in Sources */,
 				62CBDE65228412A700BB80E9 /* MyAudioViewController.m in Sources */,
 				62F2794E229D2A500082BB58 /* DouyinCell.m in Sources */,
+				A1427F2422D4C39D00E66262 /* CouponCell.m in Sources */,
 				62B7D564228D62630057ECAC /* XJCustomCellModel.m in Sources */,
 				62B7D544228D390E0057ECAC /* XJTitleCellModel.m in Sources */,
 				6257CA3D228BDEB40075E5CA /* PasswordView.m in Sources */,
@@ -834,7 +821,9 @@
 				62C5A9A72293CD8900ADA2B1 /* SongListDetailAdapter.m in Sources */,
 				628DA9F3228BB6B400233CDF /* RegisterViewController.m in Sources */,
 				62CBDE6C2284190C00BB80E9 /* CYLPlusButtonSubclass.m in Sources */,
+				A1427F2822D4CEC300E66262 /* CouponSuccessView.m in Sources */,
 				62F27936229D20F10082BB58 /* AVPlayerView.m in Sources */,
+				A1427F1F22D4C1CD00E66262 /* CouponListViewController.m in Sources */,
 				62D9F1F42277F242007F1068 /* AppDelegate.m in Sources */,
 				62CBDE622284129000BB80E9 /* FindViewController.m in Sources */,
 				62B7D55E228D5EDE0057ECAC /* XJTextCell.m in Sources */,

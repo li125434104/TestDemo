@@ -13,6 +13,7 @@
 #import "XJSetTable.h"
 #import "MineHeaderModel.h"
 #import "MineHeaderCell.h"
+#import "CouponListViewController.h"
 
 @interface MineViewController ()
 @property (nonatomic, strong) MineHeaderModel *header;  //头部ViewcCell
@@ -40,7 +41,8 @@
     
     //消息通知
     XJTitleCellModel *msg = [[XJTitleCellModel alloc] initWithTitle:@"消息通知" actionBlock:^(XJBaseCellModel * _Nonnull model) {
-        
+        CouponListViewController *vc = [[CouponListViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     //聊天记录
     XJTitleCellModel *record = [[XJTitleCellModel alloc] initWithTitle:@"聊天记录" actionBlock:^(XJBaseCellModel * _Nonnull model) {

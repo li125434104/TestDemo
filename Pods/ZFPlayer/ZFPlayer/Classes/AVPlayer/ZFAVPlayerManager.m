@@ -25,6 +25,7 @@
 #import "ZFAVPlayerManager.h"
 #import <UIKit/UIKit.h>
 #import <ZFPlayer/ZFPlayer.h>
+#import <ZFPlayer/ZFReachabilityManager.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
@@ -114,6 +115,7 @@ static NSString *const kPresentationSize         = @"presentationSize";
 @synthesize isPlaying                      = _isPlaying;
 @synthesize rate                           = _rate;
 @synthesize isPreparedToPlay               = _isPreparedToPlay;
+@synthesize shouldAutoPlay                 = _shouldAutoPlay;
 @synthesize scalingMode                    = _scalingMode;
 @synthesize playerPlayFailed               = _playerPlayFailed;
 @synthesize presentationSizeChanged        = _presentationSizeChanged;
@@ -122,6 +124,7 @@ static NSString *const kPresentationSize         = @"presentationSize";
     self = [super init];
     if (self) {
         _scalingMode = ZFPlayerScalingModeAspectFit;
+        _shouldAutoPlay = YES;
     }
     return self;
 }
@@ -130,7 +133,9 @@ static NSString *const kPresentationSize         = @"presentationSize";
     if (!_assetURL) return;
     _isPreparedToPlay = YES;
     [self initializePlayer];
-    [self play];
+    if (self.shouldAutoPlay) {
+        [self play];
+    }
     self.loadState = ZFPlayerLoadStatePrepare;
     if (self.playerPrepareToPlay) self.playerPrepareToPlay(self, self.assetURL);
 }
@@ -275,6 +280,8 @@ static NSString *const kPresentationSize         = @"presentationSize";
 - (void)bufferingSomeSecond {
     // playbackBufferEmpty会反复进入，因此在bufferingOneSecond延时播放执行完之前再调用bufferingSomeSecond都忽略
     if (self.isBuffering || self.playState == ZFPlayerPlayStatePlayStopped) return;
+    /// 没有网络
+    if ([ZFReachabilityManager sharedManager].networkReachabilityStatus == ZFReachabilityStatusNotReachable) return;
     self.isBuffering = YES;
     
     // 需要先暂停一小会之后再播放，否则网络状况不好的时候时间在走，声音播放不出来
@@ -374,7 +381,7 @@ static NSString *const kPresentationSize         = @"presentationSize";
             // When the buffer is good
             if (self.playerItem.playbackLikelyToKeepUp) {
                 self.loadState = ZFPlayerLoadStatePlayable;
-                if (self.isPlaying) [self play];
+                if (self.isPlaying) [self.player play];
             }
         } else if ([keyPath isEqualToString:kLoadedTimeRanges]) {
             NSTimeInterval bufferTime = [self availableDuration];

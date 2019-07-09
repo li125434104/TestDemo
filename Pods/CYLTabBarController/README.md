@@ -463,7 +463,7 @@ Airbnb-app效果：
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];        
  ```
 
-// iOS10 后 需要使用 `-[CYLTabBarController hideTabBadgeBackgroundSeparator]` 见 AppDelegate 类中的演示;
+// iOS10 后 需要使用 `-[CYLTabBarController hideTabBarShadowImageView]` 见 AppDelegate 类中的演示;
 
 如何调整、自定义 `PlusButton` 与其它 `TabBarItem` 的宽度？
 
@@ -927,7 +927,7 @@ A：在 v1.0.7 版本中已经修复了该 bug，但是也需要注意：
  ```Objective-C
 
     self.navigationItem.title = @"同城";    //✅sets navigation bar title.The right way to set the title of the navigation
-    self.tabBarItem.title = @"同城23333";   //❌sets tab bar title. Even the `tabBarItem.title` changed, this will be ignored in  tabbar.
+    self.tabBarItem.title = @"同城";   //❌sets tab bar title. Even the `tabBarItem.title` changed, this will be ignored in  tabbar.
     self.title = @"同城1";                  //❌sets both of these. Do not do this‼️‼️ This may cause something strange like this : http://i68.tinypic.com/282l3x4.jpg 
 
  ```

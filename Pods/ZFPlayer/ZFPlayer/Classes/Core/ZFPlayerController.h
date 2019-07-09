@@ -160,8 +160,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The play asset URL.
 @property (nonatomic) NSURL *assetURL;
 
-/// if tableView or collectionView has only one section , use sectionAssetURLs.
-/// if normal model set this can use `playTheNext` `playThePrevious` `playTheIndex:`.
+/// If tableView or collectionView has only one section , use `assetURLs`.
+/// If tableView or collectionView has more sections , use `sectionAssetURLs`.
+/// Set this you can use `playTheNext` `playThePrevious` `playTheIndex:` method.
 @property (nonatomic, copy, nullable) NSArray <NSURL *>*assetURLs;
 
 /// The currently playing index,limited to one-dimensional arrays.
@@ -289,6 +290,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// When ZFFullScreenMode is ZFFullScreenModePortrait, while the player fullSceen this value is YES.
 @property (nonatomic, readonly) BOOL isFullScreen;
 
+/// when call the `stop` method, exit the fullScreen model, default is YES.
+@property (nonatomic, assign) BOOL exitFullScreenWhenStop;
+
 /// Lock the screen orientation.
 @property (nonatomic, getter=isLockedScreen) BOOL lockedScreen;
 
@@ -301,6 +305,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The current orientation of the player.
 /// Default is UIInterfaceOrientationPortrait.
 @property (nonatomic, readonly) UIInterfaceOrientation currentOrientation;
+
+
+//@property (nonatomic, assign) BOOL <#instace#>
 
 /// The block invoked When player will rotate.
 @property (nonatomic, copy, nullable) void(^orientationWillChange)(ZFPlayerController *player, BOOL isFullScreen);
@@ -395,7 +402,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) CGFloat playerApperaPercent;
 
-/// If tableView or collectionView has more section, use sectionAssetURLs.
+/// If tableView or collectionView has more sections, use `sectionAssetURLs`.
 @property (nonatomic, copy, nullable) NSArray <NSArray <NSURL *>*>*sectionAssetURLs;
 
 /// The block invoked When the player appearing.

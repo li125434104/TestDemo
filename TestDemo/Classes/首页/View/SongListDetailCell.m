@@ -29,7 +29,7 @@
 }
 
 - (void)cellForRowAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView withData:(id)data {
-    [super cellForRowAtIndexPath:indexPath tableView:tableView withData:data];
+    [super cellForRowAtIndexPath:indexPath targetView:tableView withData:data];
     SongListDetailModel *model = data;
     self.numberLabel.text = [NSString stringWithFormat:@"%ld",indexPath.section + 1];
     self.nameLabel.text = model.name;
@@ -37,9 +37,10 @@
 }
     
 - (IBAction)mvBtnClick:(UIButton *)sender {
-    self.eventTransmissionBlock(self, self.cellData, 1, ^id(id data) {
-        return nil;
-    });
+//    self.eventTransmissionBlock(self, self.cellData, 1, ^id(id data) {
+//        return nil;
+//    });
+    
 }
     
 

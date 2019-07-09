@@ -11,11 +11,31 @@
 
 @implementation CHGCollectionReusableView
 
--(void)reusableViewForCollectionView:(UICollectionView*)collectionView indexPath:(NSIndexPath*)indexPath kind:(NSString*)kind reusableViewData:(id)reusableViewData {
-    self.collectionView = collectionView;
-    self.indexPath = indexPath;
-    self.kind = kind;
-    self.reusableViewData = reusableViewData;
+
+@synthesize eventTransmissionBlock = _eventTransmissionBlock;
+
+@synthesize indexPath = _indexPath;
+
+@synthesize kind = _kind;
+
+@synthesize protocols = _protocols;
+
+@synthesize model = _model;
+
+@synthesize targetView = _targetView;
+
+- (NSMutableArray *)protocols {
+    if (!_protocols) {
+        _protocols = [NSMutableArray array];
+    }
+    return _protocols;
+}
+
+- (void)setEventTransmissionBlock:(CHGEventTransmissionBlock)eventTransmissionBlock {
+    _eventTransmissionBlock = eventTransmissionBlock;
+    for (id protocol in self.protocols) {
+        [protocol setEventTransmissionBlock:eventTransmissionBlock];
+    }
 }
 
 /**
@@ -24,7 +44,7 @@
  @return 返回tag
  */
 -(NSInteger)adapterTag {
-    return self.collectionView.collectionViewAdapter.tag;
+    return ((UICollectionView*)self.targetView).collectionViewAdapter.tag;
 }
 
 /**
@@ -33,7 +53,7 @@
  @return 获取AdapterData中的customData
  */
 -(id)customData {
-    return self.collectionView.collectionViewAdapter.adapterData.customData;
+    return ((UICollectionView*)self.targetView).collectionViewAdapter.adapterData.customData;
 }
 
 /**
@@ -42,31 +62,40 @@
  @return 返回当前cell所在的controller
  */
 -(UIViewController*)controller {
-    return self.collectionView.collectionViewAdapter.controller;
+    return ((UICollectionView*)self.targetView).collectionViewAdapter.controller;
 }
 
-/**
- 将被复用
- 
- @param identifier identifier
- @param indexPath indexPath
- */
--(void)willReuseWithIdentifier:(NSString*)identifier indexPath:(NSIndexPath*)indexPath {
-    
+
+- (void)reusableViewForCollectionView:(nonnull UICollectionView *)collectionView indexPath:(nonnull NSIndexPath *)indexPath kind:(nonnull NSString *)kind reusableViewData:(nonnull id)reusableViewData {
+    self.targetView = collectionView;
+    self.indexPath = indexPath;
+    self.kind = kind;
+    self.model = reusableViewData;
+    for (id protocol in self.protocols) {
+        [protocol reusableViewForCollectionView:collectionView indexPath:indexPath kind:kind reusableViewData:reusableViewData];
+    }
 }
 
-/**
- cell将要显示
- */
--(void)reusableViewWillAppear {
-    
+- (void)reusableViewWillAppear {
+    for (id protocol in self.protocols) {
+        [protocol reusableViewWillAppear];
+    }
 }
 
-/**
- cell已经消失
- */
--(void)reusableViewDidDisappear {
-    
+- (void)reusableViewDidDisappear {
+    for (id protocol in self.protocols) {
+        [protocol reusableViewDidDisappear];
+    }
 }
+
+- (void)reusableViewWillReuseWithIdentifier:(nonnull NSString *)identifier indexPath:(nonnull NSIndexPath *)indexPath {
+    for (id protocol in self.protocols) {
+        [protocol reusableViewWillReuseWithIdentifier:identifier indexPath:indexPath];
+    }
+}
+
 
 @end
+
+
+

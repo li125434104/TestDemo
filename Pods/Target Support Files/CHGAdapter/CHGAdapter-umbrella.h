@@ -33,8 +33,14 @@
 #import "CHGTableViewHeaderFooterView.h"
 #import "CHGTableViewEmptyDataShow.h"
 #import "CHGTableViewAdapterData.h"
-#import "CHGSubDataOfKeyPathDelegate.h"
+#import "UIView+CHGBehaviorListener.h"
 #import "CHGScrollListener.h"
+#import "CHGCollectionReusableViewLifeCycleProtocol.h"
+#import "CHGSubDataOfKeyPathDelegate.h"
+#import "CHGTableViewHeaderFooterLifeCycleProtocol.h"
+#import "CHGViewLifeCycleProtocol.h"
+#import "CHGViewPropertyProtocol.h"
+#import "CHGBaseView.h"
 #import "CHGTaskManager.h"
 
 FOUNDATION_EXPORT double CHGAdapterVersionNumber;

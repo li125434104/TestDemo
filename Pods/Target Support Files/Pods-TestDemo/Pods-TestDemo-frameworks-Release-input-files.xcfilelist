@@ -1,0 +1,17 @@
+${PODS_ROOT}/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/CHGAdapter/CHGAdapter.framework
+${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework
+${BUILT_PRODUCTS_DIR}/DOUAudioStreamer/DOUAudioStreamer.framework
+${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework
+${BUILT_PRODUCTS_DIR}/JXBWebKit/JXBWebKit.framework
+${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/XJScanQRCode/XJScanQRCode.framework
+${BUILT_PRODUCTS_DIR}/XJTools/XJTools.framework
+${BUILT_PRODUCTS_DIR}/XMNetworking/XMNetworking.framework
+${BUILT_PRODUCTS_DIR}/YYText/YYText.framework
+${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework

@@ -157,11 +157,11 @@
     self.bottomPgrogress.frame = CGRectMake(min_x, min_y, min_w, min_h);
     
     min_x = 0;
-    min_y = 0;
-    min_w = 160;
-    min_h = 40;
+    min_y = iPhoneX ? 54 : 30;
+    min_w = 170;
+    min_h = 35;
     self.volumeBrightnessView.frame = CGRectMake(min_x, min_y, min_w, min_h);
-    self.volumeBrightnessView.center = self.center;
+    self.volumeBrightnessView.zf_centerX = self.zf_centerX;
 }
 
 - (void)dealloc {
@@ -263,6 +263,7 @@
     self.bottomPgrogress.bufferValue = 0;
     self.floatControlView.hidden = YES;
     self.failBtn.hidden = YES;
+    self.volumeBrightnessView.hidden = YES;
     self.portraitControlView.hidden = self.player.isFullScreen;
     self.landScapeControlView.hidden = !self.player.isFullScreen;
     if (self.controlViewAppeared) {
@@ -287,6 +288,11 @@
     [self.landScapeControlView showTitle:title fullScreenMode:fullScreenMode];
     [self.coverImageView setImageWithURLString:coverUrl placeholder:placeholder];
     [self.bgImgView setImageWithURLString:coverUrl placeholder:placeholder];
+    if (self.prepareShowControlView) {
+        [self showControlViewWithAnimated:NO];
+    } else {
+        [self hideControlViewWithAnimated:NO];
+    }
 }
 
 /// 设置标题、UIImage封面、全屏模式
@@ -298,6 +304,11 @@
     [self.landScapeControlView showTitle:title fullScreenMode:fullScreenMode];
     self.coverImageView.image = image;
     self.bgImgView.image = image;
+    if (self.prepareShowControlView) {
+        [self showControlViewWithAnimated:NO];
+    } else {
+        [self hideControlViewWithAnimated:NO];
+    }
 }
 
 #pragma mark - ZFPlayerControlViewDelegate
@@ -448,6 +459,8 @@
 - (void)videoPlayer:(ZFPlayerController *)videoPlayer loadStateChanged:(ZFPlayerLoadState)state {
     if (state == ZFPlayerLoadStatePrepare) {
         self.coverImageView.hidden = NO;
+        [self.portraitControlView playBtnSelectedState:videoPlayer.currentPlayerManager.shouldAutoPlay];
+        [self.landScapeControlView playBtnSelectedState:videoPlayer.currentPlayerManager.shouldAutoPlay];
     } else if (state == ZFPlayerLoadStatePlaythroughOK || state == ZFPlayerLoadStatePlayable) {
         self.coverImageView.hidden = YES;
         if (self.effectViewShow) {
@@ -783,6 +796,7 @@
 - (ZFVolumeBrightnessView *)volumeBrightnessView {
     if (!_volumeBrightnessView) {
         _volumeBrightnessView = [[ZFVolumeBrightnessView alloc] init];
+        _volumeBrightnessView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
     }
     return _volumeBrightnessView;
 }
